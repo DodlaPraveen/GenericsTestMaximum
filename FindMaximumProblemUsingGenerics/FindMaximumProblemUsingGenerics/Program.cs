@@ -2,12 +2,17 @@
 
 namespace FindMaximumProblemUsingGenerics
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            MaxStrings obj1 = new MaxStrings();
-            obj1.ReturnMax("Beeru", "HCL", "Infosoys");
+            Printer printer = new Printer();
+            printer.Print<int>(100);
+            printer.Print(200); // type infer from the specified value
+            printer.Print<string>("Hello");
+            printer.Print("World!"); // type infer from the specified value
+            Console.ReadLine();
         }
+
     }
 }
