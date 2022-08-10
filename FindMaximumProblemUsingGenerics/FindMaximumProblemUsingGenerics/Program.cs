@@ -2,17 +2,22 @@
 
 namespace FindMaximumProblemUsingGenerics
 {
-    public class Program
+    class GenericClass<T>
     {
-        public static void Main()
+        public GenericClass(T msg)
         {
-            Printer printer = new Printer();
-            printer.Print<int>(100);
-            printer.Print(200); // type infer from the specified value
-            printer.Print<string>("Hello");
-            printer.Print("World!"); // type infer from the specified value
+            Console.WriteLine(msg);
             Console.ReadLine();
         }
 
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            GenericClass<string> gen = new GenericClass<string>("This is generic class");
+            GenericClass<int> genI = new GenericClass<int>(101);
+            GenericClass<char> getCh = new GenericClass<char>('I');
+        }
     }
 }
