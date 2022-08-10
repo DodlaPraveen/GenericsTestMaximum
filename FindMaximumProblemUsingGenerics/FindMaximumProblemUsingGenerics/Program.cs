@@ -6,8 +6,8 @@ namespace FindMaximumProblemUsingGenerics
     {
         static void Main(string[] args)
         {
-            MaxFloats obj1 = new MaxFloats();
-            obj1.ReturnMax(20.4, 56.5, 70.5);
+            MaxStrings obj1 = new MaxStrings();
+            obj1.ReturnMax("Beeru", "HCL", "Infosoys");
         }
     }
 }

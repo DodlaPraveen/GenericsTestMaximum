@@ -5,10 +5,9 @@ using System.Text;
 namespace FindMaximumProblemUsingGenerics
 {
 
-    public class MaxFloats
+    public class MaxStrings
     {
-
-        public void ReturnMax(double v1, double v2, double v3)
+        public void ReturnMax(string v1, string v2, string v3)
         {
             if (v1.CompareTo(v2) > 0 && v1.CompareTo(v3) > 0 || v1.CompareTo(v2) >= 0 && v1.CompareTo(v3) > 0 || v1.CompareTo(v2) > 0 && v1.CompareTo(v3) >= 0)
             {
@@ -24,7 +23,6 @@ namespace FindMaximumProblemUsingGenerics
             }
             Console.ReadLine();
         }
-
     }
 
 }
