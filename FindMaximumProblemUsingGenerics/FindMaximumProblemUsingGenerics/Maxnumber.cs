@@ -4,48 +4,37 @@ using System.Text;
 
 namespace FindMaximumProblemUsingGenerics
 {
-    public class MaxNumbers
+    public class GenericMaximum<T> where T : IComparable
     {
-        public static void maxNumbers()
+        public T[] value;
+
+        public GenericMaximum(T[] value)
         {
-            int num1 = 554;
-            int num2 = 222;
-            int num3 = 822;
-            int num4 = 220;
+            this.value = value;
+        }
 
-            if (num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0 && num1.CompareTo(num4) > 0 ||
-               num1.CompareTo(num2) >= 0 && num1.CompareTo(num3) > 0 && num1.CompareTo(num4) > 0 ||
-                num1.CompareTo(num2) > 0 && num1.CompareTo(num3) >= 0 && num1.CompareTo(num4) > 0 ||
-                num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0 && num1.CompareTo(num4) >= 0)
+        public T[] Sort(T[] values)
+        {
+            Array.Sort(values);
+            return values;
+        }
 
-            {
-                Console.WriteLine("num 1 is greater " + num1);
-            }
+        public T MaxValue(params T[] values)
+        {
+            var sorted_values = Sort(values);
+            return sorted_values[sorted_values.Length - 1];
+        }
 
-            if (num2.CompareTo(num1) > 0 && num2.CompareTo(num3) > 0 && num2.CompareTo(num4) > 0 ||
-               num2.CompareTo(num1) >= 0 && num2.CompareTo(num3) > 0 && num2.CompareTo(num4) > 0 ||
-                num2.CompareTo(num1) > 0 && num2.CompareTo(num3) >= 0 && num2.CompareTo(num4) > 0 ||
-                num2.CompareTo(num1) > 0 && num2.CompareTo(num3) > 0 && num2.CompareTo(num4) >= 0)
-            {
-                Console.WriteLine("num 2 is greater " + num2);
-            }
+        public T MaxMethod()
+        {
+            var max = MaxValue(this.value);
+            return max;
+        }
 
-            if (num3.CompareTo(num1) > 0 && num3.CompareTo(num2) > 0 && num3.CompareTo(num4) > 0 ||
-               num3.CompareTo(num1) >= 0 && num3.CompareTo(num2) > 0 && num3.CompareTo(num4) > 0 ||
-                num3.CompareTo(num1) > 0 && num3.CompareTo(num2) >= 0 && num3.CompareTo(num4) > 0 ||
-                num3.CompareTo(num1) > 0 && num3.CompareTo(num2) > 0 && num3.CompareTo(num4) >= 0)
-            {
-                Console.WriteLine("num 3 is greater " + num3);
-            }
-
-            if (num4.CompareTo(num1) > 0 && num4.CompareTo(num2) > 0 && num4.CompareTo(num3) > 0 ||
-               num4.CompareTo(num1) >= 0 && num4.CompareTo(num2) > 0 && num4.CompareTo(num3) > 0 ||
-                num4.CompareTo(num1) > 0 && num4.CompareTo(num2) >= 0 && num4.CompareTo(num3) > 0 ||
-                num4.CompareTo(num1) > 0 && num4.CompareTo(num2) > 0 && num4.CompareTo(num3) >= 0)
-            {
-                Console.WriteLine("num 4 is greater " + num4);
-            }
-            Console.ReadKey();
+        public void PrintMaxValue()
+        {
+            var max = MaxValue(this.value);
+            Console.WriteLine("Maximum value is " + max);
         }
     }
 }
