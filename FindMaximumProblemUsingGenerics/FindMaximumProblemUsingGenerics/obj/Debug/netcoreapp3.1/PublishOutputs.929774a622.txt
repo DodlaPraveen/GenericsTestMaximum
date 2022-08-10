@@ -1,0 +1,5 @@
+G:\LPF\Day13\FindMaximumProblemUsingGenerics\FindMaximumProblemUsingGenerics\bin\Debug\netcoreapp3.1\publish\FindMaximumProblemUsingGenerics.exe
+G:\LPF\Day13\FindMaximumProblemUsingGenerics\FindMaximumProblemUsingGenerics\bin\Debug\netcoreapp3.1\publish\FindMaximumProblemUsingGenerics.dll
+G:\LPF\Day13\FindMaximumProblemUsingGenerics\FindMaximumProblemUsingGenerics\bin\Debug\netcoreapp3.1\publish\FindMaximumProblemUsingGenerics.deps.json
+G:\LPF\Day13\FindMaximumProblemUsingGenerics\FindMaximumProblemUsingGenerics\bin\Debug\netcoreapp3.1\publish\FindMaximumProblemUsingGenerics.runtimeconfig.json
+G:\LPF\Day13\FindMaximumProblemUsingGenerics\FindMaximumProblemUsingGenerics\bin\Debug\netcoreapp3.1\publish\FindMaximumProblemUsingGenerics.pdb
